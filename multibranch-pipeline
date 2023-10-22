@@ -1,0 +1,23 @@
+ pipeline {
+   agent any
+
+   stages {
+     stage('Check env') {
+       steps {
+         sh 'java -version'
+         sh 'mvn -version'
+         sh 'docker -version'
+       }
+     }
+     stage('Mvn clean test') {
+       steps {
+         sh 'mvn clean test'
+       }
+     }
+     post {
+       failure {
+         mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name -> ${env.JOB_NAME}", to: "anton11131113@gmail.com";
+       }
+     }
+   }
+ }
