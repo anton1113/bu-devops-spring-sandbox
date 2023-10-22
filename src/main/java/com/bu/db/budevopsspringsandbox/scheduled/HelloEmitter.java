@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloEmitter {
 
-    @Scheduled(fixedRate = 10_000)
+    @Scheduled(fixedRate = 2_000)
     public void sayHello() {
         System.out.println("Hello, DevOps Basics!");
     }
