@@ -20,7 +20,7 @@
          }
          stage('Build docker image') {
              steps {
-                 sh 'docker build -t anton1113/bu-devops-spring-sandbox -f Dockerfile target'
+                 sh 'docker build -t anton1113/bu-devops-spring-sandbox -f Dockerfile .'
              }
          }
          stage('Run new container') {
