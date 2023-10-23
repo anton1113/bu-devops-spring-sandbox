@@ -8,6 +8,6 @@ public class HelloEmitter {
 
     @Scheduled(fixedRate = 2_000)
     public void sayHello() {
-        System.out.println("Hello, DevOps Basics! v2");
+        System.out.println("Hello, DevOps Basics! v3");
     }
 }
