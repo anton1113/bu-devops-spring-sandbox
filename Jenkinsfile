@@ -30,7 +30,7 @@
      stage('Push docker image') {
        steps {
          sh 'docker login -u ${USER_CREDENTIALS_USR} -p ${USER_CREDENTIALS_PSW}'
-         sh 'docker push anton1113/bu-devops-spring-sandbox
+         sh 'docker push anton1113/bu-devops-spring-sandbox'
          sh 'docker logout'
        }
      }
