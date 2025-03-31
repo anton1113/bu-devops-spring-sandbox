@@ -8,6 +8,6 @@ public class GreetingsController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello from DevOps basics! (Version 1.02)";
+        return "Hello from DevOps basics! (Version 1.03), from 31.03.2025";
     }
 }
