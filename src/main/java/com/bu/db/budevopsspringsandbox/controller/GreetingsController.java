@@ -8,6 +8,6 @@ public class GreetingsController {
 
     @GetMapping("/hello")
     public String hello() {
-        return "Hello from DevOps basics! (Version 1.13), with webhook";
+        return "Hello from DevOps basics! (Version 1.14), with webhook";
     }
 }
